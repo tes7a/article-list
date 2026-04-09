@@ -6,29 +6,8 @@
       "type": "pwa-chrome",
       "request": "launch",
       "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/apps/web",
-      "preLaunchTask": "dev:web"
-    },
-    {
-      "name": "API: Dev Server",
-      "type": "node-terminal",
-      "request": "launch",
-      "command": "pnpm dev:api",
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "name": "Full Stack + Browser",
-      "type": "pwa-chrome",
-      "request": "launch",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/apps/web",
-      "preLaunchTask": "dev:full"
-    }
-  ],
-  "compounds": [
-    {
-      "name": "Run Full Stack",
-      "configurations": ["API: Dev Server", "Browser: Web"]
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "dev"
     }
   ]
 }

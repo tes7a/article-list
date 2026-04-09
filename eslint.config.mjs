@@ -10,7 +10,7 @@ export default tseslint.config(
       '**/dist/**',
       '**/node_modules/**',
       '**/*.d.ts',
-      'apps/web/components.json',
+      'components.json',
       'coverage/**',
     ],
   },
@@ -44,7 +44,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['apps/web/**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -58,7 +58,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['apps/api/src/**/*.test.ts'],
+    files: ['src/**/*.test.ts'],
     languageOptions: {
       globals: {
         ...globals.jest,
@@ -66,4 +66,3 @@ export default tseslint.config(
     },
   },
 );
-

@@ -8,32 +8,9 @@
       "problemMatcher": []
     },
     {
-      "label": "dev:full",
-      "dependsOn": ["dev:api", "dev:web"],
-      "dependsOrder": "parallel",
-      "problemMatcher": []
-    },
-    {
-      "label": "dev:api",
+      "label": "dev",
       "type": "shell",
-      "command": "pnpm dev:api",
-      "isBackground": true,
-      "problemMatcher": {
-        "owner": "custom",
-        "pattern": {
-          "regexp": ".*"
-        },
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": ".*",
-          "endsPattern": "API listening on http://localhost:3001"
-        }
-      }
-    },
-    {
-      "label": "dev:web",
-      "type": "shell",
-      "command": "pnpm dev:web",
+      "command": "pnpm dev",
       "isBackground": true,
       "problemMatcher": {
         "owner": "custom",
@@ -78,28 +55,10 @@
       "problemMatcher": ["$tsc"]
     },
     {
-      "label": "test:api",
+      "label": "test",
       "type": "shell",
       "command": "pnpm test",
       "problemMatcher": []
-    },
-    {
-      "label": "test:web",
-      "type": "shell",
-      "command": "pnpm test:web",
-      "problemMatcher": []
-    },
-    {
-      "label": "build:api",
-      "type": "shell",
-      "command": "pnpm build:api",
-      "problemMatcher": ["$tsc"]
-    },
-    {
-      "label": "build:web",
-      "type": "shell",
-      "command": "pnpm build:web",
-      "problemMatcher": ["$tsc"]
     }
   ]
 }

@@ -1,28 +1,23 @@
-# Article List Monorepo
+# Article List Web
 
-Monorepo with:
-
-- `apps/api` — Express API
-- `apps/web` — React + TypeScript + Vite client
+Frontend application for the article list UI.
 
 ## Stack
 
-- `pnpm` workspace
-- `Express`
-- `React`
-- `TypeScript`
-- `Vite`
-- `Tailwind CSS`
-- `Zustand`
-- `axios`
-- `shadcn/ui`
-- `ESLint`
-- `Prettier`
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Zustand
+- axios
+- shadcn/ui
+- ESLint
+- Prettier
 
 ## Requirements
 
-- `Node.js 22+`
-- `pnpm 10+`
+- Node.js 22+
+- pnpm 10+
 
 ## Install
 
@@ -32,60 +27,44 @@ pnpm install
 
 ## Environment Variables
 
-### Web
-
-File: `apps/web/.env`
+File: `.env`
 
 ```env
-VITE_API_URL=http://localhost:3001
+VITE_API_DELAY_MS=400
 ```
 
-### API
+Example:
 
-File: `apps/api/.env`
+- `.env.example`
 
-```env
-PORT=3001
-CORS_ORIGIN=http://localhost:3000
-```
-
-Examples are available in:
-
-- `apps/web/.env.example`
-- `apps/api/.env.example`
-
-## Run Locally
-
-Run both applications:
+## Run
 
 ```bash
 pnpm dev
 ```
 
-Run only API:
+Web URL:
+
+- `http://localhost:3000`
+
+## Commands
+
+Build:
 
 ```bash
-pnpm dev:api
+pnpm build
 ```
 
-Run only Web:
-
-```bash
-pnpm dev:web
-```
-
-## Local URLs
-
-- Web: `http://localhost:3000`
-- API: `http://localhost:3001`
-- Articles endpoint: `http://localhost:3001/api/articles`
-
-## Main Commands
-
-Check types:
+Typecheck:
 
 ```bash
 pnpm check-types
+```
+
+Tests:
+
+```bash
+pnpm test
 ```
 
 Lint:
@@ -94,7 +73,7 @@ Lint:
 pnpm lint
 ```
 
-Auto-fix lint:
+Lint fix:
 
 ```bash
 pnpm lint:fix
@@ -106,70 +85,10 @@ Format:
 pnpm format
 ```
 
-Build all:
+## Deploy
 
-```bash
-pnpm build
-```
+Deploy this project to Vercel with:
 
-Build only API:
-
-```bash
-pnpm build:api
-```
-
-Build only Web:
-
-```bash
-pnpm build:web
-```
-
-Run API tests:
-
-```bash
-pnpm test
-```
-
-Run Web tests:
-
-```bash
-pnpm test:web
-```
-
-## VS Code
-
-Project includes:
-
-- `.vscode/tasks.json`
-- `.vscode/launch.json`
-- `.vscode/settings.json`
-
-Available from VS Code:
-
-- dev API
-- dev Web
-- full dev run
-- lint
-- tests
-- build
-- browser launch
-
-## Deploy Notes
-
-Recommended split:
-
-- `web` -> Vercel
-- `api` -> separate Node host
-
-Production env example for web:
-
-```env
-VITE_API_URL=https://your-api-domain
-```
-
-Production env example for api:
-
-```env
-PORT=3001
-CORS_ORIGIN=https://your-vercel-domain
-```
+- Root Directory: `.`
+- Build Command: `pnpm build`
+- Output Directory: `dist`
