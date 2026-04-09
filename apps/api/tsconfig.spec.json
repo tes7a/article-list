@@ -5,6 +5,5 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["src/**/*.test.ts", "src/app.ts", "src/index.ts"]
+  "include": ["src/**/*.test.ts", "src/app.ts", "src/server.ts", "api/index.ts"]
 }
-
