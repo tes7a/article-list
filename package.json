@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "build:pages": "tsc -p tsconfig.json --noEmit && vite build --base=/article-list/",
     "check-types": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
